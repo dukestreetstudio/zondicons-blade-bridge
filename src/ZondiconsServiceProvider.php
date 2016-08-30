@@ -2,16 +2,12 @@
 
 namespace Zondicons;
 
+use BladeSvg\IconFactory;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class ZondiconsServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap the application services.
-     *
-     * @return void
-     */
     public function boot()
     {
         Blade::extend(function ($html) {
@@ -25,15 +21,17 @@ class ZondiconsServiceProvider extends ServiceProvider
         ]);
     }
 
-    /**
-     * Register the application services.
-     *
-     * @return void
-     */
     public function register()
     {
-        $this->app->singleton(ZondiconFactory::class, function () {
-            return new ZondiconFactory(config('zondicons'));
+        $this->app->singleton(IconFactory::class, function () {
+            $config = array_merge([
+            'icon_path' => base_path('vendor/'),
+            'spritesheet_path' => 'path/to/spritesheet',
+            'inline' => false,
+            'class' => 'icon',
+            ], config('zondicons'));
+
+            return new IconFactory($config);
         });
     }
 }
