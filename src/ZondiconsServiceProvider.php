@@ -24,7 +24,7 @@ class ZondiconsServiceProvider extends ServiceProvider
                 'icon_path' => base_path('vendor/zondicons/blade-bridge/resources/icons'),
                 'spritesheet_path' => base_path('vendor/zondicons/blade-bridge/resources/sprite.svg'),
                 'sprite_prefix' => 'zondicon-',
-            ], config('zondicons'));
+            ], config('zondicons', []));
 
             return new IconFactory($config);
         });
