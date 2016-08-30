@@ -28,7 +28,7 @@ Publish the Zondicons config file:
 php artisan vendor:publish
 ```
 
-If you want to use the sprite sheet instead of rendering every icon inline, make sure you render the hidden sprite sheet somewhere at the end of any layouts that are going to use icons using the `zondicons()` helper:
+If you want to use the sprite sheet instead of rendering every icon inline, make sure you render the hidden sprite sheet somewhere at the end of any layouts that are going to use icons using the `svg_spritesheet()` helper:
 
 ```
 <!-- layout.blade.php -->
@@ -39,7 +39,7 @@ If you want to use the sprite sheet instead of rendering every icon inline, make
     <body>
         <!-- ... -->
 
-        {{ zondicons() }}
+        {{ svg_spritesheet() }}
     </body>
 </html>
 ```
