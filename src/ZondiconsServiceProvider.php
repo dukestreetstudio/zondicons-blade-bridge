@@ -21,10 +21,9 @@ class ZondiconsServiceProvider extends ServiceProvider
     {
         $this->app->singleton(IconFactory::class, function () {
             $config = array_merge([
-                'icon_path' => base_path('vendor/'),
-                'spritesheet_path' => 'path/to/spritesheet',
-                'inline' => false,
-                'class' => 'icon',
+                'icon_path' => base_path('vendor/zondicons/blade-bridge/resources/icons'),
+                'spritesheet_path' => base_path('vendor/zondicons/blade-bridge/resources/sprite.svg'),
+                'sprite_prefix' => 'zondicon-',
             ], config('zondicons'));
 
             return new IconFactory($config);
