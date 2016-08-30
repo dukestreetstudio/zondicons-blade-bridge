@@ -10,11 +10,7 @@ class ZondiconsServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Blade::extend(function ($html) {
-            return preg_replace_callback('/\@icon((\(.+\)\-\>.+)*\(.+\))/', function ($matches) {
-                return '<?php echo zondicon'.$matches[1].'; ?>';
-            }, $html);
-        });
+        app(IconFactory::class)->registerBladeTag();
 
         $this->publishes([
             __DIR__.'/../config/zondicons.php' => config_path('zondicons.php'),
@@ -25,10 +21,10 @@ class ZondiconsServiceProvider extends ServiceProvider
     {
         $this->app->singleton(IconFactory::class, function () {
             $config = array_merge([
-            'icon_path' => base_path('vendor/'),
-            'spritesheet_path' => 'path/to/spritesheet',
-            'inline' => false,
-            'class' => 'icon',
+                'icon_path' => base_path('vendor/'),
+                'spritesheet_path' => 'path/to/spritesheet',
+                'inline' => false,
+                'class' => 'icon',
             ], config('zondicons'));
 
             return new IconFactory($config);
