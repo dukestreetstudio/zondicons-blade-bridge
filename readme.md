@@ -4,7 +4,9 @@ Easily use Zondicons in your Blade templates, either as inline SVG or using SVG 
 
 ## Installation
 
-`composer require zondicons/blade-bridge`
+```
+composer require zondicons/blade-bridge
+```
 
 ## Getting started
 
