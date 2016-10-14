@@ -2,6 +2,10 @@
 
 Easily use Zondicons in your Blade templates, either as inline SVG or using SVG sprites.
 
+## Installation
+
+`composer require zondicons/blade-bridge`
+
 ## Getting started
 
 Add the Zondicons service provider to your `config/app.php` file:
