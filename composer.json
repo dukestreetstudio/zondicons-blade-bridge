@@ -1,13 +1,18 @@
 {
     "name": "zondicons/blade-bridge",
+    "license": "MIT",
     "authors": [
+        {
+            "name": "Steve Schoger",
+            "email": "sm.schoger@gmail.com"
+        },
         {
             "name": "Adam Wathan",
             "email": "adam.wathan@gmail.com"
         }
     ],
     "require": {
-        "nothingworks/blade-svg": "dev-master"
+        "nothingworks/blade-svg": "^0.1.0"
     },
     "autoload": {
         "psr-4": {
