@@ -25,7 +25,7 @@
         "laravel": {
             "providers": [
                 "Zondicons\\ZondiconsServiceProvider"
-            ],
+            ]
         }
     }
 }
