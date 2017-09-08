@@ -10,7 +10,7 @@ composer require zondicons/blade-bridge
 
 ## Getting started
 
-Add the Zondicons service provider to your `config/app.php` file:
+In Laravel 5.5 the service provider will automatically get registered. In older versions of the framework just add the Zondicons service provider in `config/app.php` file:
 
 ```php
 <?php

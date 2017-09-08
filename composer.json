@@ -20,5 +20,12 @@
         },
         "files": [
         ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zondicons\\ZondiconsServiceProvider"
+            ],
+        }
     }
 }
