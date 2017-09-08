@@ -1,5 +1,6 @@
 {
     "name": "zondicons/blade-bridge",
+    "description": "Easily integrate the Zondicons icon set into your Laravel applications.",
     "license": "MIT",
     "authors": [
         {
