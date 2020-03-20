@@ -2,7 +2,7 @@
 
 namespace Zondicons;
 
-use BladeSvg\IconFactory;
+use BladeSvg\SvgFactory;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,7 +26,7 @@ class ZondiconsServiceProvider extends ServiceProvider
                 'sprite_prefix' => 'zondicon-',
             ], config('zondicons', []));
 
-            return new IconFactory($config);
+            return new SvgFactory($config);
         });
     }
 }
